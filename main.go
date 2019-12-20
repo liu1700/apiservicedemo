@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"multipurpose/config"
-	"multipurpose/handlers"
-	"multipurpose/logger"
+	"apiservicedemo/config"
+	"apiservicedemo/handlers"
+	"apiservicedemo/logger"
 	"net/http"
 	"os"
 	"os/signal"

@@ -1,4 +1,4 @@
-module multipurpose
+module apiservicedemo
 
 go 1.13
 
