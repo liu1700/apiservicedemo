@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apiservice-deployment
+spec:
+  selector:
+    matchLabels:
+      app: apiservice
+      type: backend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: apiservice
+        type: backend
+    spec:
+      containers:
+      - name: apiservice-container
+        image: PLEASE_REPLACE_ME_WITH_YOUR_AWS_ACCOUNTID.dkr.ecr.us-west-2.amazonaws.com/apiservice:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9797
+      imagePullSecrets:
+        - name: us-west-2-ecr-registry
