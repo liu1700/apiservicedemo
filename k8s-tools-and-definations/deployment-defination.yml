@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: apiservice-container
-        image: PLEASE_REPLACE_ME_WITH_YOUR_AWS_ACCOUNTID.dkr.ecr.us-west-2.amazonaws.com/apiservice:latest
+        image: REPLACE_ME_WITH_YOUR_IMAGE_PATH  # Fox example: ${ACCOUNT}.dkr.ecr.${REGION}.amazonaws.com/${IMAGE_NAME}:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 9797
